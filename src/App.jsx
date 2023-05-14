@@ -1,12 +1,17 @@
-
+import {Route, Routes} from "react-router-dom"
+import Home from "./pages/Home"
+import Movie from "./pages/Movie"
+import Navbar from "./components/Navbar/Navbar"
 
 function App() {
 
   return (
     <>
-      <p className="">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/movie/:id" element={<Movie/>} />
+      </Routes>
     </>
   )
 }
