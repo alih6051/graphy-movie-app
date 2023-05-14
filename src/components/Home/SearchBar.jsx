@@ -28,7 +28,7 @@ function SearchBar() {
     if (params.s === "") return;
     setLoading(true);
     axios
-      .get(`http://www.omdbapi.com`, { params: params })
+      .get(`https://www.omdbapi.com`, { params: params })
       .then((res) => {
         setLoading(false);
         if (res.data.Error) return toast(res.data.Error);

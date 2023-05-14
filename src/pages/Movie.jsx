@@ -12,7 +12,7 @@ function Movie() {
     setLoading(true);
     axios
       .get(
-        `http://www.omdbapi.com/?i=${id}&apikey=${import.meta.env.VITE_API_KEY}`
+        `https://www.omdbapi.com/?i=${id}&apikey=${import.meta.env.VITE_API_KEY}`
       )
       .then((res) => {
         setMovie(res.data);
